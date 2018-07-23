@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # require 'pry'
+=======
+require 'pry'
+>>>>>>> 1c5276b450d4614cb9fb1aa8e5743889b6a58747
 
 # Helper Method
 def position_taken?(board, index)
@@ -18,6 +22,7 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
+<<<<<<< HEAD
   WIN_COMBINATIONS.detect do |win_combi|
     (win_combi.all? { |index| board[index] == "X" }) || (win_combi.all? { |index| board[index] == "O" })
   end
@@ -42,3 +47,15 @@ def winner(board)
 end
 
 # binding.pry
+=======
+  WIN_COMBINATIONS.each do |win_combi|
+    if (win_combi.all? { |index| board[index] == "X" }) || (win_combi.all? { |index| board[index] == "O" })
+      win_combi
+    else
+      false
+    end
+  end
+end
+
+binding.pry
+>>>>>>> 1c5276b450d4614cb9fb1aa8e5743889b6a58747
